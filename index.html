@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700|Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet"/>
+    <title>Web Components Crash Course</title>
+  </head>
+  <body>
+    <h1>Web Components Crash Course</h1>
+    <card-block>
+      <ul>
+        <li>Custom Elements</li>
+        <li>Shadow DOM</li>
+        <li>HTML Templates</li>
+      </ul>
+    </card-block>
+    <card-block>
+      <h2>
+        LifeCycle Methods
+      </h2>
+      <ul>
+        <li>
+          <code>constructor()</code>: Called when an instance of the element is created or
+          upgraded
+        </li>
+        <li>
+          <code>connectedCallback()</code>: Called every time when the element is inserted into
+          the DOM
+        </li>
+        <li>
+          <code>disconnectedCallback()</code>: Called every time the element is removed from
+          the DOM
+        </li>
+        <li>
+          <code>attributeChangedCallback(attributeName, oldValue, newValue)</code>: Called when
+          an attribute is added, removed, updated, or replaced
+        </li>
+      </ul>
+    </card-block>
+    <card-block>
+      <h2>
+        Shadow DOM
+      </h2>
+      <ul>
+        <li>Used for self-contained components</li>
+        <li>Encapsulate styles and markup</li>
+        <li>
+          Create with
+          <strong><code>element.attachShadow({ mode: open })</code></strong>
+        </li>
+        <li>
+          Creates a
+          <strong>"shadowRoot"</strong>
+          that we can reference and interact with
+        </li>
+      </ul>
+    </card-block>
+    <card-block>
+      <h2>
+        HTML Templates
+      </h2>
+      <ul>
+        <li>Define the encapsulated markup of our component</li>
+        <li>Template tag stores markup on page</li>
+        <li>Include both HTML and CSS in templates</li>
+        <li>Use slots to add custom text</li>
+      </ul>
+    </card-block>
+
+    <script src="cardBlock.js"></script>
+  </body>
+</html>
